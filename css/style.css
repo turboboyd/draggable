@@ -48,6 +48,7 @@ body {
     opacity 1s;
 }
 
+
 /* .gallery_wrap {
   will-change: transform;
   transition:
@@ -87,3 +88,18 @@ body {
     filter: invert(100%);
   }
 }
+
+/* @media (max-width: 768px) {
+  .gallery {
+    width: 70vw;
+    transform: scale(4);
+    gap: 1.5em;
+  }
+  .gallery__item {
+    transform: scale(1.);
+    margin-bottom: 2em;
+  }
+  .gallery__item:hover {
+    transform: scale(1.55);
+  }
+} */
