@@ -67,6 +67,7 @@ body {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: pixelated;
   width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -89,11 +90,11 @@ body {
 @media (max-width: 768px) {
   .gallery {
     width: 70vw;
-    transform: scale(5);
+    transform: scale(6);
     gap: 1.5em;
   }
   .gallery__item {
-    transform: scale(1.5);
+    transform: scale(1.1);
     margin-bottom: 2em;
   }
   .gallery__item:hover {
