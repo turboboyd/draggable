@@ -87,13 +87,13 @@ body {
 @media (max-width: 768px) {
   .gallery {
     width: 70vw;
-    transform: scale(5);
+    /* transform: scale(5); */
     /* gap: em; */
   }
-  .gallery__item {
-    transform: scale(1);
+  /* .gallery__item {
+    transform: scale(0.6);
     margin-bottom: 1em;
-  }
+  } */
   /* .gallery__item:hover {
     transform: scale(1.55);
   } */
