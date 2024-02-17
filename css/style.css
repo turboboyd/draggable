@@ -87,7 +87,7 @@ body {
 @media (max-width: 768px) {
   .gallery {
     width: 70vw;
-    transform: scale(7);
+    transform: scale(2);
     /* gap: em; */
   }
   .gallery__item {
