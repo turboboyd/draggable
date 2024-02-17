@@ -80,11 +80,12 @@ body {
 
 @media (max-width: 768px) {
   .gallery {
-    width: 80%;
+    width: 70vw;
     transform: scale(4);
-    gap: 4px;
+    gap: 2em;
   }
   .gallery__item {
-    margin-bottom: 4px;
+    transform: scale(1.3);
+    margin-bottom: 2em;
   }
 }
