@@ -47,7 +47,7 @@ body {
     transform 1s cubic-bezier(0.75, 1, 0.25, 1),
     opacity 1s;
 }
-.gallery_wrap{
+.gallery_wrap {
   will-change: transform;
   transition:
     transform 1s cubic-bezier(0.75, 1, 0.25, 1),
@@ -89,7 +89,7 @@ body {
 @media (max-width: 768px) {
   .gallery {
     width: 70vw;
-    transform: scale(4);
+    transform: scale(5);
     gap: 1.5em;
   }
   .gallery__item {
@@ -97,6 +97,6 @@ body {
     margin-bottom: 2em;
   }
   .gallery__item:hover {
-  transform: scale(1.55);
-}
+    transform: scale(1.55);
+  }
 }
