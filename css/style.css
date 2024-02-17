@@ -47,6 +47,12 @@ body {
     transform 1s cubic-bezier(0.75, 1, 0.25, 1),
     opacity 1s;
 }
+.gallery_wrap{
+  will-change: transform;
+  transition:
+    transform 1s cubic-bezier(0.75, 1, 0.25, 1),
+    opacity 1s;
+}
 .gallery__item {
   margin-bottom: var(--gap);
   will-change: transform;

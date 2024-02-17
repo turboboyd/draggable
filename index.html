@@ -98,65 +98,67 @@
         </picture>
       </div> -->
     </div>
-    <script>
-      // Путь к изображениям
-      const imagePath = "./img/";
+<script>
+  // Путь к изображениям
+  const imagePath = "./img/";
 
-      // Количество изображений
-      const numberOfImages = 20;
+  // Количество изображений
+  const numberOfImages = 20;
 
-      // Количество галерей
-      const numberOfGalleries = 3;
+  // Количество галерей
+  const numberOfGalleries = 3;
 
-      // Количество дубликатов
-      const numberOfDuplicates = 1;
+  // Количество дубликатов
+  const numberOfDuplicates = 1;
 
-      // Основной контейнер
-      const mainContainer = document.getElementById("galleryContainer");
+  // Основной контейнер
+  const mainContainer = document.getElementById("galleryContainer");
 
-      // Создание и добавление элементов в галереи
+  // Создание и добавление элементов в галереи
+  for (
+    let galleryIndex = 1;
+    galleryIndex <= numberOfGalleries;
+    galleryIndex++
+  ) {
+    const galleryContainer = document.createElement("div");
+    galleryContainer.id = `galleryContainer${galleryIndex}`;
+    galleryContainer.classList.add("gallery_wrap"); // Добавляем класс "gallery" к контейнеру
+
+    for (let i = 1; i <= numberOfImages; i++) {
       for (
-        let galleryIndex = 1;
-        galleryIndex <= numberOfGalleries;
-        galleryIndex++
+        let duplicateIndex = 1;
+        duplicateIndex <= numberOfDuplicates;
+        duplicateIndex++
       ) {
-        const galleryContainer = document.createElement("div");
-        galleryContainer.id = `galleryContainer${galleryIndex}`;
+        const galleryItem = document.createElement("div");
+        galleryItem.className = "gallery__item";
 
-        for (let i = 1; i <= numberOfImages; i++) {
-          for (
-            let duplicateIndex = 1;
-            duplicateIndex <= numberOfDuplicates;
-            duplicateIndex++
-          ) {
-            const galleryItem = document.createElement("div");
-            galleryItem.className = "gallery__item";
+        const picture = document.createElement("picture");
 
-            const picture = document.createElement("picture");
+        // const sourceWebp = document.createElement("source");
+        // sourceWebp.srcset = `${imagePath}webp/${i}.webp`;
+        // sourceWebp.type = "image/webp";
+        // picture.appendChild(sourceWebp);
 
-            // const sourceWebp = document.createElement("source");
-            // sourceWebp.srcset = `${imagePath}webp/${i}.webp`;
-            // sourceWebp.type = "image/webp";
-            // picture.appendChild(sourceWebp);
+        const sourceJpg = document.createElement("source");
+        sourceJpg.srcset = `${imagePath}${i}.jpg 1x, ${imagePath}${i}@x2.jpg 2x`;
+        sourceJpg.type = "image/jpg";
+        picture.appendChild(sourceJpg);
 
-            const sourceJpg = document.createElement("source");
-            sourceJpg.srcset = `${imagePath}${i}.jpg 1x, ${imagePath}${i}@x2.jpg 2x`;
-            sourceJpg.type = "image/jpg";
-            picture.appendChild(sourceJpg);
+        const img = document.createElement("img");
+        img.src = `${imagePath}${i}.jpg`;
+        img.alt = `Alt ${i}`;
+        img.loading = "lazy";
 
-            const img = document.createElement("img");
-            img.src = `${imagePath}${i}.jpg`;
-            img.alt = `Alt ${i}`;
-            img.loading = "lazy";
-
-            picture.appendChild(img);
-            galleryItem.appendChild(picture);
-            galleryContainer.appendChild(galleryItem);
-          }
-        }
-
-        mainContainer.appendChild(galleryContainer);
+        picture.appendChild(img);
+        galleryItem.appendChild(picture);
+        galleryContainer.appendChild(galleryItem);
       }
-    </script>
+    }
+
+    mainContainer.appendChild(galleryContainer);
+  }
+</script>
+
   </body>
 </html>
