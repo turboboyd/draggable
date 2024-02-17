@@ -83,3 +83,18 @@ body {
     filter: invert(100%);
   }
 }
+
+@media (max-width: 768px) {
+  .gallery {
+    width: 70vw;
+    transform: scale(7);
+    /* gap: em; */
+  }
+  .gallery__item {
+    transform: scale(1);
+    margin-bottom: 1em;
+  }
+  /* .gallery__item:hover {
+    transform: scale(1.55);
+  } */
+}
